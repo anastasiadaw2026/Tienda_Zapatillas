@@ -37,7 +37,7 @@ class PerfilCliente(Perfil):
         return super().__str__() + (f'Telefono: {self._telefono}\n'
                                     f'Email: {self._email}')
 
-c = PerfilCliente()
-c.telefono = '(+34)777 777 777'
-c.email = 'hbgewvbñ@fe.es'
-print(c)
+# c = PerfilCliente()
+# c.telefono = '(+34)777 777 777'
+# c.email = 'hbgewvbñ@fe.es'
+# print(c)

@@ -23,6 +23,6 @@ class PerfilVendedor(Perfil):
     def __str__(self):
         return super().__str__() + f'DNI: {self._dni}'
 
-v = PerfilVendedor()
-v.dni = '12345678t'
-print(v)
+# v = PerfilVendedor()
+# v.dni = '12345678t'
+# print(v)

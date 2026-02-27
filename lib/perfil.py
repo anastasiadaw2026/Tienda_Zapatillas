@@ -7,7 +7,7 @@ class Perfil:
     # letra, el piso siendo no obligatorio
     PATTERN_DIRECCION = re.compile(r'^[Cc]alle\s+[A-Za-z]+\s+\d{1,3}$|'
     r'^[Cc]alle\s+[A-Za-z]+\s+\d{1,3},\s*(portal|escalera|casa)\s*\d{1,3}$|'
-    r'^[Cc]alle\s+[A-Za-z]+\s+\d{1,3},\s*piso\s*\d{1,3}[A-Za-z]?$|'
+    r'^[Cc]alle\s+[A-Za-z]+\s+\d{1,3},\s*piso\s*\d{1,3}[A-Za-z]?$|' 
     r'^[Pp]laza\s+[A-Za-z]+\s+\d{1,3}$|'
     r'^[Aa]venida\s+[A-Za-z]+\s+\d{1,3}$|'
     r'^[Pp]aseo\s+[A-Za-z]+\s+\d{1,3}$')

@@ -6,7 +6,7 @@ class Zapatilla:
         self._marca: str = ''
         self._numero: float = 0.0
         self._color: str = ''
-        self._precio: float = 0
+        self._precio: float = 0.0
         self._stock: int = 0
 
     @property
@@ -23,10 +23,10 @@ class Zapatilla:
 
     @numero.setter
     def numero(self, valor):
-        if isinstance(valor, (float, int)):
+        if isinstance(valor, (float, int)) and valor > 0:
             self._numero = valor
         else:
-            self._numero = 'Desconocido'
+            self._numero = None
 
     @property
     def precio(self):
@@ -34,7 +34,7 @@ class Zapatilla:
 
     @precio.setter
     def precio(self, valor):
-        if isinstance(valor, (float, int)):
+        if isinstance(valor, (float, int)) and valor > 0:
             self._precio = valor
         else:
             self._precio = None
@@ -65,7 +65,12 @@ class Zapatilla:
         if isinstance(cantidad_aniadida, int):
             self._stock += cantidad_aniadida
 
-z = Zapatilla()
-z.add_stock(3)
-z.add_stock(6)
-print(z)
+# z = Zapatilla()
+# z.marca = 'adidas'
+# z.precio = 10000
+# z.numero = 56
+# z.color ='negro'
+# print(z)
+# z.precio = 34.5
+# z.numero = 23.6
+# print(z)
