@@ -1,13 +1,6 @@
-# compra -> p_c, p_v, zàtilla, cantidad
-#
-#    -- add_linea_compra
-#
-#    -- crear_factura
-#
-#    -- pagar
 from lib.perfil_cliente import PerfilCliente
 from lib.perfil_vendedor import PerfilVendedor
-from lib.zapatiila import Zapatilla
+from lib.zapatilla import Zapatilla
 
 
 class Compra:
@@ -18,6 +11,7 @@ class Compra:
         self.perfil_vendedor: PerfilVendedor = PerfilVendedor()
         self.zapatilla: list[Zapatilla] = []
         self.cantidad: int = 0
+
 
     def add_linea_compra(self, numero):
         linea_compra: list = [self.perfil_cliente, self.perfil_vendedor,
@@ -48,6 +42,14 @@ class Compra:
               f"------------\n"
               f"Cliente: {compra[0].nombre}\n"
               f"Vendedor: {compra[1].nombre}")
+
+    def pagar(self):
+        print("Pagando...")
+        # liberar carrito
+        self.zapatilla = []
+        self.cantidad = 0
+
+
 
 
 z = Zapatilla()
